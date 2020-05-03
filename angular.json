@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "meuMercado"
+    }
+  },
+  "defaultProject": "meuMercado",
+  "cli": {
+    "analytics": false
+  }
 }

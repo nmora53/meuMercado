@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  fire: {apiKey: "AIzaSyCezZb2R60Fy6uiKfuEIPibTGQ83U9L-Tg",
+  authDomain: "mercado-c72e1.firebaseapp.com",
+  databaseURL: "https://mercado-c72e1.firebaseio.com",
+  projectId: "mercado-c72e1",
+  storageBucket: "mercado-c72e1.appspot.com",
+  messagingSenderId: "784113555678",
+  appId: "1:784113555678:web:61ec785c9746696ac28a4f",
+  measurementId: "G-K5B9NGPFVT",
+},
 };
 
 /*
