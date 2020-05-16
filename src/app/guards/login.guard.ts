@@ -16,9 +16,11 @@ export class LoginGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    return this.afAuth.user.pipe(map(user => !!user), tap(islogin => {
-      if(!islogin){
-        this.router.navigate(['login']);
+    return this.afAuth.user.pipe(
+      map((user) => !!user),
+      tap((islogin) => {
+        if(!islogin){
+          this.router.navigate(['login']);
 
       }
     })

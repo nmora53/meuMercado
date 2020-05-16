@@ -9,16 +9,19 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {environment} from '../environments/environment';
 import { HomeComponent } from './components/home/home.component';
+import { RegisterComponent } from './components/register/register.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,ReactiveFormsModule,FormsModule, AngularFireModule.initializeApp(environment.fire),AngularFireAuthModule],
+    AppRoutingModule,ReactiveFormsModule,FormsModule, AngularFireModule.initializeApp(environment.fire),AngularFireAuthModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
