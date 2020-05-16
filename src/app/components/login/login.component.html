@@ -1,23 +1,45 @@
-<div class="login">
-  <h1 class="title">Login</h1>
-  <form [formGroup]="loginForm" (ngSubmit)="goToLogin()">
+<h1 class="title">Welcome Back</h1>
+<p class="sub-title">Sign to continue</p>
 
-    <div class="container">
-      <label  for="email">Email</label>
-      <input type="email" placeholder="correo@correo" id="email" formControlName="email"/>
+<form [formGroup]="loginForm" (ngSubmit)="goToLogin()" class="login-form">
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <mat-icon matPrefix class="icon">email</mat-icon>
+    <input
+      matInput
+      type="text"
+      placeholder="correo@corre.com"
+      formControlName="email"
+    />
+    <mat-error>{{ getError(loginForm.get("email")) }}</mat-error>
+  </mat-form-field>
 
-    </div>
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <mat-icon matPrefix class="icon">lock</mat-icon>
+    <input
+      matInput
+      type="password"
+      placeholder="*** *** ***"
+      formControlName="pass"
+    />
+    <mat-error>{{ getError(loginForm.get("pass")) }}</mat-error>
+  </mat-form-field>
 
-    <div class="container">
-      <label for="pass">Password</label>
-      <input type="password" id="pass" placeholder="*****" formControlName="pass"/>
-    </div>
+  <button
+    mat-raised-button
+    [appLoad]="isLoad"
+    color="primary"
+    [disabled]="loginForm.invalid || isLoad"
+    name="Login"
+  ></button>
+  <mat-error class="login-error">{{ error }}</mat-error>
+</form>
 
-    <button class="btn-primary login-btn" [disabled]="loginForm.invalid">Entrar</button>
-{{error}}
-  </form>
+<p class="create">
+  Don't have account?
+  <a [routerLink]="registerPath" mat-button color="primary">
+    create a new account
+  </a>
+</p>
 
-
-
-
-</div>

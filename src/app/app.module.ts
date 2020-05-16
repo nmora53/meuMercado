@@ -11,18 +11,33 @@ import {environment} from '../environments/environment';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LoadDirective } from './directives/load.directive';
+import { MatIconModule } from '@angular/material/icon';
+
+const materialModules = [MatInputModule, MatButtonModule,MatProgressSpinnerModule,MatIconModule,];
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoadDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,ReactiveFormsModule,FormsModule, AngularFireModule.initializeApp(environment.fire),AngularFireAuthModule, BrowserAnimationsModule],
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.fire),
+    AngularFireAuthModule,
+    BrowserAnimationsModule,
+    ...materialModules,
+  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

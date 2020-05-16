@@ -1,18 +1,35 @@
-.login{
+:host {
+  display: flow-root;
+}
+
+.login {
   width: 300px;
   margin: 100px auto 0;
   border: 1px solid #d4d4d4;
   padding: 30px 20px;
   border-radius: 10px;
-
 }
 
-.title{
+.title {
+  margin: 80px 0 0;
+  font-size: 30px;
+  color: #3f50b5;
   text-align: center;
-  margin-top: 0;
+  font-weight: bold;
 }
 
-.container{
+.sub-title {
+  text-align: center;
+  margin-bottom: 15vh;
+  color: #3f50b575;
+  font-size: 17px;
+}
+
+.icon {
+  color: #3f50b5;
+}
+
+.container {
   margin-bottom: 10px;
   input {
     display: block;
@@ -20,12 +37,31 @@
     padding: 5px 10px;
     box-sizing: border-box;
   }
+
   label {
     font-size: 10px;
   }
 }
 
-.login-btn{
+.login-btn {
   margin: auto;
   display: block;
+}
+
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 500px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+.login-error {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.create {
+  margin-top: 20px;
+  text-align: center;
 }
