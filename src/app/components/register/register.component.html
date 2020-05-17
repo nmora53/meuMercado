@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="title">Registrate</h1>
+    <h1 class="title">Cadastre-se</h1>
     <form class="form" [formGroup]="registerForm" (ngSubmit)="registerUser()">
       <label for="email">Email</label>
       <input type="text" formControlName="email" id="email" />
@@ -11,4 +11,3 @@
       <span *ngIf="!!error"> {{ error }}</span>
     </form>
   </div>
-  
